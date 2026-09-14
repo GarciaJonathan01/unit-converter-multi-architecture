@@ -1,50 +1,94 @@
 # Unit Converter — Multi-Architecture
 
-Academic unit-conversion system implemented several times to compare service styles, platforms, and client technologies.
+This project is a unit conversion system built with Java and .NET. It shows how the same system can use SOAP or REST services and different client types.
 
 ## Overview
 
-The repository contains equivalent conversion and authentication flows exposed through SOAP and RESTful services. Each architecture includes its own clients so the communication approach can be studied end to end.
+The project was created to compare service architectures. Each version provides authentication and unit conversion operations through its own backend and clients.
 
-## Architectures
+## Main Features
+
+- User authentication
+- Temperature conversions
+- Length conversions
+- Weight conversions
+- SOAP and REST service calls
+- Console, desktop, web, and Android clients
+
+## Architecture
+
+The repository contains four separate implementations:
 
 - Java SOAP
-- Java RESTful
 - .NET SOAP
-- .NET RESTful
+- Java REST
+- .NET REST
+
+```mermaid
+flowchart LR
+    A[Console Client] --> E[Selected Service]
+    B[Desktop Client] --> E
+    C[Web Client] --> E
+    D[Android Client] --> E
+    E --> F[Conversion Logic]
+```
 
 ## Applications
 
-Each architecture contains a console client, desktop client, web client, Android mobile client, and backend/web service.
+| Application | Technology | Purpose |
+| --- | --- | --- |
+| Backend services | Java or .NET | Provide authentication and conversions |
+| Console clients | Java or C# | Use the services from a terminal |
+| Desktop clients | Java Swing or .NET | Provide a desktop interface |
+| Web clients | JSP/Servlets or ASP.NET MVC | Provide browser access |
+| Mobile clients | Kotlin / Android | Provide mobile access |
 
-## Technologies
+## Tech Stack
 
-- Java, Maven, Jakarta XML Web Services and Jakarta REST
-- C#, ASP.NET and Visual Studio solutions
-- Kotlin, Android and Gradle
-- JSP/Servlets and ASP.NET MVC views
+### Backend
+
+- Java
+- Jakarta XML Web Services and Jakarta REST
+- C# and ASP.NET
+
+### Clients
+
+- Java Swing
+- JSP and Servlets
+- ASP.NET MVC
+- Kotlin and Android
+
+### Communication
+
+- SOAP
+- REST
+
+### Tools
+
+- Maven
+- Gradle
+- Visual Studio solutions
 
 ## Project Structure
 
-- `TI1.1 SOAP_JAVA_SINBDD_GR09/`
-- `TI1.2 SOAP_DOTNET_SINBDD_GR09/`
-- `TI1.3 RESTFUL_JAVA_SINBDD_GR09/`
-- `TI1.4 RESTFUL_DOTNET_SINBDD_GR09/`
+```text
+unit-converter-multi-architecture/
+├── TI1.1 SOAP_JAVA_SINBDD_GR09/
+├── TI1.2 SOAP_DOTNET_SINBDD_GR09/
+├── TI1.3 RESTFUL_JAVA_SINBDD_GR09/
+└── TI1.4 RESTFUL_DOTNET_SINBDD_GR09/
+```
 
-Each directory is further divided into server, console, desktop, mobile, web, and documentation components.
+Each folder contains a backend and its console, desktop, web, and mobile clients.
 
-## Features
+## Getting Started
 
-- User authentication
-- Unit conversion operations
-- SOAP and REST service consumption
-- Console, desktop, web, and mobile user interfaces
+Choose one architecture first. Build Java modules from the folder that contains `pom.xml`. Open Android modules in Android Studio. Open .NET applications with their `.sln` files in Visual Studio. Start the selected backend before its clients and set local service URLs when needed.
 
-## Running the Project
+## Screenshots
 
-Build Java modules from the directory containing their `pom.xml` with Maven. Open Android modules using Android Studio and their included Gradle configuration. Open .NET applications through their corresponding `.sln` files in Visual Studio. Start the selected backend before its clients and update local endpoint configuration when required.
+Screenshots will be added soon.
 
 ## Academic Context
 
-This group academic project was created for a Software Architecture course to compare equivalent solutions across Java, .NET, SOAP, RESTful, web, desktop, console, and mobile technologies.
-
+This project was developed as part of a university software architecture course. The main goal was to compare Java, .NET, SOAP, REST, and several client platforms.
